@@ -169,6 +169,13 @@
         .card-bg.bg-haldi { justify-content: flex-start; padding-top: 60px; }
         .card-bg.bg-sukh { justify-content: flex-end; padding-bottom: 70px; }
         
+        /* Background styling for Reception Card */
+        .bg-reception {
+            background-image: url('ReceptionPage.jpg'); /* Your background image without text */
+            justify-content: flex-start;
+            padding-top: 35px;
+            padding-bottom: 25px;
+        }
         .bg-opening { background-image: url('Opening.jpg'); }
         .bg-save { background-image: url('FirstPage.jpg'); }
         .bg-sukh { background-image: url('SukhmaniSahibPath.jpg'); }
@@ -346,6 +353,43 @@
             </div>
         </div>
 
+        <!-- Event: Reception Invitation -->
+        <div class="fade-section timeline-row">
+            <div class="timeline-card card-bg bg-reception">
+                <!-- V&S Top Floral Monogram Accent -->
+                <div class="script-font" style="font-size: 2.2rem; color: #4A5D4E; margin-bottom: 2px;">V & S</div>
+                
+                <h2 style="font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #3A000E; margin-bottom: 5px;">Reception Invitation</h2>
+        
+                <!-- Scratch Card Layer in the Middle -->
+                <div class="scratch-container" style="max-width: 320px; min-height: 230px; margin-top: 8px;">
+                    <canvas class="scratch-canvas" id="canvas-reception" data-color="#E8E2D5" data-text="Scratch for Venue & Time"></canvas>
+                    
+                    <div class="scratch-content" style="color: #2C3E35; padding: 15px 10px;">
+                        <p style="font-weight: 700; font-size: 0.95rem; letter-spacing: 1px; color: #3A000E;">NOVEMBER 28, 2026</p>
+                        <p style="font-weight: 700; margin-top: 4px; font-size: 0.88rem;">7:00 PM – 11:00 PM</p>
+                        
+                        <div style="margin-top: 10px; font-size: 0.82rem; line-height: 1.4;">
+                            <p style="font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Hotel Ilapuram</p>
+                            <p>14-1-12, Besant Road, Gandhi Nagar,</p>
+                            <p>Vijayawada</p>
+                        </div>
+        
+                        <a href="https://maps.google.com/?q=Hotel+Ilapuram+Besant+Road+Gandhi+Nagar+Vijayawada" target="_blank" class="btn-link" style="margin-top: 10px;">Location Map</a>
+                    </div>
+                </div>
+        
+                <p style="font-style: italic; font-size: 0.8rem; color: #3A000E; margin-top: 12px; font-weight: 600;">
+                    We look forward to celebrating with you!
+                </p>
+            </div>
+        
+            <!-- Right Timeline Date Tag -->
+            <div class="timeline-date-tag">
+                <div class="day">28</div>
+                <div class="month">Nov</div>
+            </div>
+        </div>
         <!-- Countdown Timer -->
         <div class="fade-section countdown-card">
             <h3 class="script-font text-glow-gold" style="font-size: 2.2rem; margin-bottom: 5px;">Counting Down to Our Forever</h3>
@@ -527,7 +571,8 @@
         window.addEventListener('load', () => { 
             initScratchCard('canvas-sukhmani'); 
             initScratchCard('canvas-haldi'); 
-            initScratchCard('canvas-jaggo'); 
+            initScratchCard('canvas-jaggo');
+            initScratchCard('canvas-reception');
             startCountdown();
         });
 
